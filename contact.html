@@ -1,11 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <style>
+        body {
+            background-image: url("images/contact-background-image.jpg");
+            background-repeat: no-repeat;
+            min-width: 100vh;
+            min-width: 100vw;
+        }
+
+        .navbar-nav>li {
+            padding-left: 70px;
+            padding-right: 8vw;
+        }
+
+        .main-body-contact-form {
+            width: 40vw;
+            margin-top: 10vh;
+            /* margin-left: 25vw; */
+            margin-left: 50vw;
+            margin-bottom: 25vh;
+            display: inline-block;
+
+            padding: 10px;
+
+            font-weight: inherit;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/email-handler.js"></script>
 </head>
+
 <body>
-    
+    <div class="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="project.html">Projects</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="main-body">
+        <div class="main-body-contact-form">
+            <h1>Contact Form</h1>
+            <form>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">First Name</label>
+                    <input type="text" class="form-control" name="firstName">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Surname</label>
+                    <input type="text" class="form-control" name="surname">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Contact email</label>
+                    <input type="email" class="form-control" name="contactEmail"
+                        placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Request</label>
+                    <textarea class="form-control" name="message" rows="3" placeholder="Message"></textarea>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button onclick="sendEmail()" type="submit" class="btn btn-primary">Send</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+
+
+
+    </div>
+
 </body>
+
 </html>
